@@ -26,7 +26,7 @@ namespace Datos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=orinoco-bi;Initial Catalog=Fonade;User ID=sa2;Password=Password1;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=206.49.179.6;Initial Catalog=Fonade;User ID=desarrollo;Password=Admin1234;")]
         public string FonadeConnectionString {
             get {
                 return ((string)(this["FonadeConnectionString"]));

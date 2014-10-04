@@ -1819,7 +1819,12 @@ namespace Fonade.Negocio
         public bool Validatecrl(String Datos, String Firma)
         {
             bool bValidatecrl = false;
+            
+            return false;
+            //f3l
+            /*
             SignedData SingData;
+            
             //int CAPICOM_VERIFY_SIGNATURE_ONLY = 0;
             //Inicializamos la constante CAPICOM_CHECK_ONLINE_REVOCATION_STATUS que permite hacer la verificación siempre en línea
             //CAPICOM.CAPICOM_CHECK_FLAG.CAPICOM_CHECK_ONLINE_REVOCATION_STATUS = //&H8;
@@ -1856,6 +1861,7 @@ namespace Fonade.Negocio
             }
             catch (Exception ex)
             { bValidatecrl = false; return bValidatecrl; }
+            */
         }
 
         /// <summary>
@@ -1866,6 +1872,8 @@ namespace Fonade.Negocio
         /// <returns>boolean.</returns>
         public bool ValidateRoot(String Datos, String Firma)
         {
+            return false;//f3l
+            /* f3l
             SignedData SignedData;
             int resultado = 0;
             bool bValidateRoot = false;
@@ -1899,6 +1907,7 @@ namespace Fonade.Negocio
                 return bValidateRoot;
             }
             catch { bValidateRoot = false; return bValidateRoot; }
+            */
         }
 
         /// <summary>
@@ -1909,6 +1918,8 @@ namespace Fonade.Negocio
         /// <returns>boolean.</returns>
         public bool Validatetime(String Datos, String Firma)
         {
+            return false;
+            /* f3l
             SignedData SignedData;
             int resultado = 0;
             bool ValidateTime = false;
@@ -1942,6 +1953,7 @@ namespace Fonade.Negocio
                 return ValidateTime;
             }
             catch { ValidateTime = false; return ValidateTime; }
+            */
         }
 
         /// <summary>
@@ -1951,6 +1963,8 @@ namespace Fonade.Negocio
         /// <param name="Firma">Firma</param>
         public void Viewcertificate(String Datos, String Firma)
         {
+            //f3l
+            /*
             SignedData Verifier;
             //Dim count //NO SE USA!
 
@@ -1969,6 +1983,7 @@ namespace Fonade.Negocio
                 foreach (Certificate Certificate in Verifier.Certificates) { Certificate.Display(); }
             }
             catch { }
+            */
         }
 
         /// <summary>
@@ -1978,6 +1993,7 @@ namespace Fonade.Negocio
         /// <param name="Firma">Firma</param>
         public void GetSigners(String Datos, String Firma)
         {
+            /* f3l
             SignedData Verifier;
             String Msgbox = "";
 
@@ -2003,6 +2019,7 @@ namespace Fonade.Negocio
 
             }
             catch { }
+            */
         }
 
         #endregion

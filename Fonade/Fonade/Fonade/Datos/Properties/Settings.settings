@@ -5,10 +5,10 @@
     <Setting Name="FonadeConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=206.49.179.6;Initial Catalog=Fonade;User ID=desarrollo;Password=Admin1234;&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=206.49.179.6;Initial Catalog=Fonade2;User ID=desarrollo;Password=Admin1234;&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=206.49.179.6;Initial Catalog=Fonade;User ID=desarrollo;Password=Admin1234;</Value>
+      <Value Profile="(Default)">Data Source=206.49.179.6;Initial Catalog=Fonade2;User ID=desarrollo;Password=Admin1234;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

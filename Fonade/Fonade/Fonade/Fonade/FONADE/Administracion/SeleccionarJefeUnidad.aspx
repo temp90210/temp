@@ -66,8 +66,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="btn_enviar_cambio_jefe_unidad" Text="Enviar" runat="server" OnClick="btn_enviar_cambio_jefe_unidad_Click"
-                                OnClientClick="return validar()" />
+                            <asp:Button ID="btn_enviar_cambio_jefe_unidad" Text="Enviar" runat="server" OnClick="btn_enviar_cambio_jefe_unidad_Click" />
                             <asp:HiddenField ID="hdf_depto_selected" runat="server" />
                             <asp:HiddenField ID="hdf_municipio_selected" runat="server" />
                         </td>

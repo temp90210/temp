@@ -109,8 +109,10 @@ namespace Fonade.Clases
                     Correo correo = new Correo(usuario.Email, "Tarea Pendiente Fondo Emprender", queryContacto.Email, (queryContacto.Nombres + queryContacto.Apellidos), this.NomTarea, this.Descripcion);
                     correo.Enviar();
                 }
-                catch
-                { respuesta = "La notificación por correo al usuario " + this.ParaQuien + " no pudo ser enviada."; }
+                catch(Exception e)
+                { 
+                    respuesta = "La notificación por correo al usuario " + this.ParaQuien + " no pudo ser enviada. ("+e.GetType().Name+")"; 
+                }
             }
             return respuesta;
         }

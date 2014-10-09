@@ -396,7 +396,7 @@ namespace Datos
     #endregion
 		
 		public FonadeDBDataContext() : 
-				base("Data Source=206.49.179.6;Initial Catalog=Fonade2;User ID=desarrollo;Password=Admi" +
+				base("Data Source=10.33.0.200;Initial Catalog=Fonade2;User ID=desarrollo;Password=Admi" +
 						"n1234;", mappingSource)
 		{
 			OnCreated();

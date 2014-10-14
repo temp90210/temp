@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Fonade.FONADE.Administracion
 {
-    public partial class ProyectoAcreditacion : Negocio.Base_Page
+    public partial class RATProyAcreditacion :  Negocio.Base_Page //System.Web.UI.Page
     {
         #region Variables globales.
 
@@ -128,8 +128,8 @@ namespace Fonade.FONADE.Administracion
             if (dt.Rows.Count > 0)
             {
                 mNomUnidadEmprendimiento.Text = dt.Rows[0]["NOMUNIDAD"].ToString() + " - " + dt.Rows[0]["NOMINSTITUCION"].ToString() + "";
-                mNomproyecto.Text = mCodproyecto + " - " + dt.Rows[0]["NOMPROYECTO"].ToString();
-                mNomCiudad.Text = dt.Rows[0]["NOMCIUDAD"].ToString() + " (" + dt.Rows[0]["NOMDEPARTAMENTO"].ToString() + ")";
+                lblmNomproyecto.Text = mCodproyecto + " - " + dt.Rows[0]["NOMPROYECTO"].ToString();
+                lblmNomCiudad.Text = dt.Rows[0]["NOMCIUDAD"].ToString() + " (" + dt.Rows[0]["NOMDEPARTAMENTO"].ToString() + ")";
             }
 
             txtSQL = "SELECT DISTINCT (NOMBRES + ' ' + APELLIDOS) 'NOMBRE' FROM CONTACTO C JOIN PROYECTOCONTACTO PC ON (PC.CODROL=1 AND PC.INACTIVO=0 AND PC.CODCONTACTO=C.ID_CONTACTO) WHERE PC.CODPROYECTO =" + mCodproyecto;
@@ -139,19 +139,19 @@ namespace Fonade.FONADE.Administracion
             pintar(mAsesor, txtSQL);
 
             txtSQL = "SELECT FECHA FROM PROYECTOFORMALIZACION WHERE CODPROYECTO =" + mCodproyecto + " AND CODCONVOCATORIA=" + mCodConvocatoria;
-            pintar(mFechaAval, txtSQL);
+            pintar(lblmFechaAval, txtSQL);
 
 
             if (Constantes.CONST_Asignado_para_acreditacion == 1)
-                rbEstadoAsignado.Checked = true;
+                rbAsignado.Checked = true;
             if (Constantes.CONST_Pendiente == 1)
-                rbEstadoPendiente.Checked = true;
+                rbPendiente.Checked = true;
             if (Constantes.CONST_Subsanado == 1)
-                rbEstadoSubsanado.Checked = true;
+                rbSubsanado.Checked = true;
             if (Constantes.CONST_Acreditado == 1)
-                rbEstadoAcreditado.Checked = true;
+                rbAcreditado.Checked = true;
             if (Constantes.CONST_No_acreditado == 1)
-                rbEstadoNoAcreditado.Checked = true;
+                rbNoAcreditado.Checked = true;
         }
 
         private void lenartablaacreditacion()
@@ -393,30 +393,30 @@ namespace Fonade.FONADE.Administracion
                             if (((ImageButton)control).CommandArgument.ToString().Split(';')[0].Equals("PENDIENTE"))
                             {
                                 if (((ImageButton)control).ImageUrl.ToString().Equals("~/Images/icoConObservacion.gif"))
-                                    rbEstadoPendiente.Checked = true;
+                                    rbPendiente.Checked = true;
                                 else
-                                    rbEstadoPendiente.Checked = false;
+                                    rbPendiente.Checked = false;
                             }
                             if (((ImageButton)control).CommandArgument.ToString().Split(';')[0].Equals("SUBSANADO"))
                             {
                                 if (((ImageButton)control).ImageUrl.ToString().Equals("~/Images/icoConObservacion.gif"))
-                                    rbEstadoSubsanado.Checked = true;
+                                    rbSubsanado.Checked = true;
                                 else
-                                    rbEstadoSubsanado.Checked = false;
+                                    rbSubsanado.Checked = false;
                             }
                             if (((ImageButton)control).CommandArgument.ToString().Split(';')[0].Equals("ACREDITADO"))
                             {
                                 if (((ImageButton)control).ImageUrl.ToString().Equals("~/Images/icoConObservacion.gif"))
-                                    rbEstadoAcreditado.Checked = true;
+                                    rbAcreditado.Checked = true;
                                 else
-                                    rbEstadoAcreditado.Checked = false;
+                                    rbAcreditado.Checked = false;
                             }
                             if (((ImageButton)control).CommandArgument.ToString().Split(';')[0].Equals("NOACREDITADO"))
                             {
                                 if (((ImageButton)control).ImageUrl.ToString().Equals("~/Images/icoConObservacion.gif"))
-                                    rbEstadoNoAcreditado.Checked = true;
+                                    rbNoAcreditado.Checked = true;
                                 else
-                                    rbEstadoNoAcreditado.Checked = false;
+                                    rbNoAcreditado.Checked = false;
                             }
                         }
                     }
@@ -492,7 +492,7 @@ namespace Fonade.FONADE.Administracion
                 if (RsProyecto.Rows.Count > 0)
                 {
                     mNomProyecto = RsProyecto.Rows[0]["NOMPROYECTO"].ToString();
-                    mNomCiudad.Text = RsProyecto.Rows[0]["NOMCIUDAD"].ToString() + "(" + RsProyecto.Rows[0]["NOMDEPARTAMENTO"].ToString() + ")";
+                    lblmNomCiudad.Text = RsProyecto.Rows[0]["NOMCIUDAD"].ToString() + "(" + RsProyecto.Rows[0]["NOMDEPARTAMENTO"].ToString() + ")";
                     mNomUnidadEmprendimiento.Text = RsProyecto.Rows[0]["NOMUNIDAD"] + " - " + RsProyecto.Rows[0]["NOMINSTITUCION"].ToString();
                 }
 
@@ -500,7 +500,7 @@ namespace Fonade.FONADE.Administracion
                 mAsesor.Text = getAsesor(mCodproyecto, mCodConvocatoria);
                 mAsesorLider.Text = getAsesorLider(mCodproyecto, mCodConvocatoria);
                 mNomConvocatoria.Text = getNomConvocatoria(mCodConvocatoria);
-                mFechaAval.Text = getFechaAval(mCodproyecto, mCodConvocatoria).ToString("dd/MM/yyyy");
+                lblmFechaAval.Text = getFechaAval(mCodproyecto, mCodConvocatoria).ToString("dd/MM/yyyy");
 
                 validarPrecondiciones(mCodproyecto, mCodConvocatoria);
                 //mCodEstadoProyecto = (getEstadoProyecto(mCodConvocatoria, mCodproyecto));

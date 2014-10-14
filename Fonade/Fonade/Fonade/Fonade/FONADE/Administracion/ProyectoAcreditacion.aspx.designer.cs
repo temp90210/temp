@@ -10,7 +10,7 @@
 namespace Fonade.FONADE.Administracion {
     
     
-    public partial class ProyectoAcreditacion {
+    public partial class RATProyAcreditacion {
         
         /// <summary>
         /// divCuerpoPrograma control.
@@ -58,76 +58,76 @@ namespace Fonade.FONADE.Administracion {
         protected global::System.Web.UI.WebControls.LinkButton mAsesor;
         
         /// <summary>
-        /// mNomproyecto control.
+        /// lblmNomproyecto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mNomproyecto;
+        protected global::System.Web.UI.WebControls.Label lblmNomproyecto;
         
         /// <summary>
-        /// mNomCiudad control.
+        /// lblmNomCiudad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mNomCiudad;
+        protected global::System.Web.UI.WebControls.Label lblmNomCiudad;
         
         /// <summary>
-        /// mFechaAval control.
+        /// lblmFechaAval control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mFechaAval;
+        protected global::System.Web.UI.WebControls.Label lblmFechaAval;
         
         /// <summary>
-        /// rbEstadoAsignado control.
+        /// rbAsignado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbEstadoAsignado;
+        protected global::System.Web.UI.WebControls.RadioButton rbAsignado;
         
         /// <summary>
-        /// rbEstadoPendiente control.
+        /// rbPendiente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbEstadoPendiente;
+        protected global::System.Web.UI.WebControls.RadioButton rbPendiente;
         
         /// <summary>
-        /// rbEstadoSubsanado control.
+        /// rbSubsanado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbEstadoSubsanado;
+        protected global::System.Web.UI.WebControls.RadioButton rbSubsanado;
         
         /// <summary>
-        /// rbEstadoAcreditado control.
+        /// rbAcreditado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbEstadoAcreditado;
+        protected global::System.Web.UI.WebControls.RadioButton rbAcreditado;
         
         /// <summary>
-        /// rbEstadoNoAcreditado control.
+        /// rbNoAcreditado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbEstadoNoAcreditado;
+        protected global::System.Web.UI.WebControls.RadioButton rbNoAcreditado;
         
         /// <summary>
         /// tproyectoacreditacion control.

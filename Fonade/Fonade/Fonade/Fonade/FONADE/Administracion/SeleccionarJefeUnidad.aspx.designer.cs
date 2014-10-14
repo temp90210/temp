@@ -76,6 +76,15 @@ namespace Fonade.FONADE.Administracion {
         protected global::System.Web.UI.WebControls.Button btn_enviar_cambio_jefe_unidad;
         
         /// <summary>
+        /// btn_enviar_cambio_jefe_unidad_ConfirmButtonExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ConfirmButtonExtender btn_enviar_cambio_jefe_unidad_ConfirmButtonExtender;
+        
+        /// <summary>
         /// hdf_depto_selected control.
         /// </summary>
         /// <remarks>

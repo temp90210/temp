@@ -1,19 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Master.master" EnableEventValidation="false"
-    AutoEventWireup="true" CodeBehind="ProyectoAcreditacion.aspx.cs" Inherits="Fonade.FONADE.Administracion.ProyectoAcreditacion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="ProyectoAcreditacion.aspx.cs" Inherits="Fonade.FONADE.Administracion.RATProyAcreditacion" %>
 
-<asp:Content ID="head1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        table
-        {
-            width: 100%;
-        }
-        td
-        {
-            vertical-align: top;
-        }
-    </style>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="bodyContentPlace">
+<asp:Content ID="Content2" ContentPlaceHolderID="bodyContentPlace" runat="server">
     <asp:Panel ID="divCuerpoPrograma" runat="server">
         <h1>
             <label>
@@ -26,18 +15,15 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    UNIDAD:&nbsp;
+                <td colspan="2">UNIDAD:&nbsp;
                     <asp:Label ID="mNomUnidadEmprendimiento" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td>
-                    ASESOR LIDER:&nbsp;
+                <td>ASESOR LIDER:&nbsp;
                     <asp:LinkButton ID="mAsesorLider" runat="server" Text="" OnClick="mAsesorLider_Click"></asp:LinkButton>
                 </td>
-                <td>
-                    ASESOR:&nbsp;
+                <td>ASESOR:&nbsp;
                     <asp:LinkButton ID="mAsesor" runat="server" Text="" OnClick="mAsesor_Click"></asp:LinkButton>
                 </td>
             </tr>
@@ -48,46 +34,40 @@
         <table>
             <tr>
                 <td colspan="4">
-                    <h2>
-                        DATOS DEL PROYECTO</h2>
+                    <h2>DATOS DEL PROYECTO</h2>
                 </td>
             </tr>
             <tr>
-                <td>
-                    Plan de Negocio:
+                <td>Plan de Negocio:
                 </td>
                 <td>
-                    <asp:Label ID="mNomproyecto" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblmNomproyecto" runat="server" Text=""></asp:Label>
+                </td>
+                <td>Lugar ejecución:
                 </td>
                 <td>
-                    Lugar ejecución:
-                </td>
-                <td>
-                    <asp:Label ID="mNomCiudad" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblmNomCiudad" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td>
-                    Fecha de aval:(dd/mm/aaaa)
+                <td>Fecha de aval:(dd/mm/aaaa)
                 </td>
                 <td>
-                    <asp:Label ID="mFechaAval" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblmFechaAval" runat="server" Text=""></asp:Label>
                 </td>
-                <td>
-                </td>
-                <td>
-                </td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
         <br />
         <table>
             <tr>
                 <td>
-                    <asp:RadioButton ID="rbEstadoAsignado" runat="server" Text="Asignado" Enabled="false" />&nbsp;&nbsp;
-                    <asp:RadioButton ID="rbEstadoPendiente" runat="server" Text="Pendiente" Enabled="false" />&nbsp;&nbsp;
-                    <asp:RadioButton ID="rbEstadoSubsanado" runat="server" Text="Subsanado" Enabled="false" />&nbsp;&nbsp;
-                    <asp:RadioButton ID="rbEstadoAcreditado" runat="server" Text="Acreditado" Enabled="false" />&nbsp;&nbsp;
-                    <asp:RadioButton ID="rbEstadoNoAcreditado" runat="server" Text="No Acreditado" Enabled="false" />
+                    <asp:RadioButton ID="rbAsignado" runat="server" Text="Asignado" Enabled="false" />&nbsp;&nbsp;
+                    <asp:RadioButton ID="rbPendiente" runat="server" Text="Pendiente" Enabled="false" />&nbsp;&nbsp;
+                    <asp:RadioButton ID="rbSubsanado" runat="server" Text="Subsanado" Enabled="false" />&nbsp;&nbsp;
+                    <asp:RadioButton ID="rbAcreditado" runat="server" Text="Acreditado" Enabled="false" />&nbsp;&nbsp;
+                    <asp:RadioButton ID="rbNoAcreditado" runat="server" Text="No Acreditado" Enabled="false" />
                 </td>
             </tr>
         </table>
@@ -125,8 +105,7 @@
                     <asp:LinkButton ID="lnknotificaciones" runat="server" Text="Ver Notificaciones Enviadas"
                         OnClick="lnknotificaciones_Click"></asp:LinkButton>
                 </td>
-                <td style="text-align: right;">
-                    # Radicación CRIF
+                <td style="text-align: right;"># Radicación CRIF
                 </td>
                 <td>
                     <asp:TextBox ID="txtradificacion" runat="server" Width="150px"></asp:TextBox>
@@ -147,8 +126,7 @@
         <asp:Panel ID="pnlestadoproyec" runat="server" Visible="false">
             <table>
                 <tr>
-                    <td>
-                        Observaciones
+                    <td>Observaciones
                     </td>
                 </tr>
                 <tr>

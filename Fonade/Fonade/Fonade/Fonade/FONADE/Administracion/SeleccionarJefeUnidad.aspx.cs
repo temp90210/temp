@@ -67,6 +67,20 @@ namespace Fonade.FONADE.Administracion
                     CargarDepartamentos();
                     CargarCiudades();
                     CargarDatosIniciales();
+
+                    // Esto para configurar el mensaje de confirmacion del boton
+                    string[] a = lnk_jefeSeleccionable.CommandArgument.ToString().Split(';');
+                    string b = lnk_jefeSeleccionable.CommandName;
+
+                    if (a[1].Equals("Asesor"))
+                    {
+                        btn_enviar_cambio_jefe_unidad_ConfirmButtonExtender.ConfirmText = Texto("TXT_ADVERTENCIA_PROYECTOSHUERFANOS");
+                    }
+                    else
+                    {
+                        btn_enviar_cambio_jefe_unidad_ConfirmButtonExtender.ConfirmText = Texto("TXT_ADVERTENCIA_CAMBIOROLUSUARIO");
+                    }
+
                 }
             }
             catch (Exception)
@@ -246,7 +260,7 @@ namespace Fonade.FONADE.Administracion
             //Inicializar variables.
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ApplicationServices"].ToString());
             SqlCommand cmd = new SqlCommand();
-            String RSTexto;
+            //String RSTexto;
             String txtSQL;
             bool correcto = false;
 
@@ -850,6 +864,15 @@ namespace Fonade.FONADE.Administracion
         {
             string []a = lnk_jefeSeleccionable.CommandArgument.ToString().Split(';');
             string b = lnk_jefeSeleccionable.CommandName;
+
+            if (a[1].Equals("Asesor"))
+            {
+                btn_enviar_cambio_jefe_unidad_ConfirmButtonExtender.ConfirmText = Texto("TXT_ADVERTENCIA_PROYECTOSHUERFANOS");
+            } else
+            {
+                btn_enviar_cambio_jefe_unidad_ConfirmButtonExtender.ConfirmText = Texto("TXT_ADVERTENCIA_CAMBIOROLUSUARIO");
+            }
+
 
             if (a[1].Equals("Asesor"))
             {

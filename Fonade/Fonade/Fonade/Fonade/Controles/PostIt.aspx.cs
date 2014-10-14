@@ -54,7 +54,7 @@ namespace Fonade.Controles
         String txtSQL = "";
 
         private DataTable _DataContactos;
-        private Consultas consulta;
+        private Consultas consulta = new Consultas(); //WAFS 11-OCT-2014
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -68,9 +68,9 @@ namespace Fonade.Controles
                 //busca el nombre del usuario en la base de datos
                 var contacto = (from c in consulta.Db.Contactos
                                 where c.Id_Contacto == CodUsuario
-                                select new
+                                select new 
                                 {
-                                    c.Nombres,
+                                    c.Nombres, 
                                     c.Apellidos
                                 }).FirstOrDefault();
 

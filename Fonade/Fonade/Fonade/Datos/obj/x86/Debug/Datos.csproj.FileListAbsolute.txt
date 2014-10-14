@@ -15,6 +15,5 @@ C:\felipe\fonade\FONADE_Clasico_y_modernizado\Fonade_Modernizado\Fonade\Fonade\F
 C:\fonade\Fonade\Fonade\Fonade\Datos\bin\Debug\Datos.dll.config
 C:\fonade\Fonade\Fonade\Fonade\Datos\bin\Debug\Datos.dll
 C:\fonade\Fonade\Fonade\Fonade\Datos\bin\Debug\Datos.pdb
-C:\fonade\Fonade\Fonade\Fonade\Datos\bin\Debug\TSHAK.Components.dll
 C:\fonade\Fonade\Fonade\Fonade\Datos\obj\x86\Debug\Datos.dll
 C:\fonade\Fonade\Fonade\Fonade\Datos\obj\x86\Debug\Datos.pdb

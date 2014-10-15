@@ -554,6 +554,13 @@ namespace Fonade.FONADE.Proyecto
 
             for (int i = 0; i < gw_AporteEmprendedores.Rows.Count; i++)
             {
+                // add negrita caso ERROR-JEF-UNID-40 (f3l)
+                if (gw_AporteEmprendedores.Rows[i].Cells[1].Text == "Total")
+                {
+                
+                    gw_AporteEmprendedores.Rows[i].Cells[2].Text = "<b>" + gw_AporteEmprendedores.Rows[i].Cells[2].Text + "</b>";
+                }
+                //f3l end
                 if (gw_AporteEmprendedores.Rows[i].Cells[3].Text != "&nbsp;" && gw_AporteEmprendedores.Rows[i].Cells[1].Text != "Total")
                 {
                     if (esMiembro == true && usuario.CodGrupo == Constantes.CONST_Emprendedor && bRealizado == false)

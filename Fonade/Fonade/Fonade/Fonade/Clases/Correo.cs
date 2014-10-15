@@ -23,9 +23,9 @@ namespace Fonade.Clases
         public Correo(string deEmail, string deNombre, string paraEmail, string paraNombre, string asunto, string cuerpo)
         {
             //Pruebas.
-            this.DeEmail = "mauricio.arias@glogic.com.co"; //deEmail;
+            this.DeEmail = "felipe@dominiopublico.com.co"; //deEmail;
             this.DeNombre = "usuario pruebas emails.";//deNombre;
-            this.ParaEmail = "lawrent.suelta@glogictechnology.onmicrosoft.com"; //paraNombre;
+            this.ParaEmail = "pruebasemail@mailinator.com"; //paraNombre;
             this.ParaNombre = "usuario recibir emails."; //paraEmail;
             this.Asunto = asunto;
             this.Cuerpo = cuerpo;

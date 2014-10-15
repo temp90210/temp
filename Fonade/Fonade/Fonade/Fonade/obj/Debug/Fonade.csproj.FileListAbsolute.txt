@@ -9,5 +9,6 @@ C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Fonade\bin\TSHAK.Compo
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Fonade\bin\Datos.pdb
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Fonade\bin\Newtonsoft.Json.Fakes.xml
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Fonade\obj\Debug\Fonade.csprojFakesResolveAssemblyReference.cache
+C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Fonade\obj\Debug\Fonade.csprojResolveAssemblyReference.cache
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Fonade\obj\Debug\Fonade.dll
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Fonade\obj\Debug\Fonade.pdb

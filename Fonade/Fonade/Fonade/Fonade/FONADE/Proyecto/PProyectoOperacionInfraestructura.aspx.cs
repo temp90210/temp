@@ -471,6 +471,14 @@ namespace Fonade.FONADE.Proyecto
                     btn_guardar_ultima_actualizacion.Visible = true;
                 }
 
+                // INICIO WAFS 13-OCT-2014
+                //Mostrar los enlaces para adjuntar documentos.
+                if (EsMiembro && Session["CodRol"].ToString() == Constantes.CONST_RolEmprendedor.ToString() && !bRealizado)
+                {
+                    tabla_docs.Visible = true;
+                }
+                // FIN WAFS 13-OCT-2014
+
                 //Destruir variables.
                 tabla = null;
                 txtSQL = null;
@@ -856,6 +864,24 @@ namespace Fonade.FONADE.Proyecto
 
         }
 
+        // INICIO WAFS 12-OCT-2014
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Session["CodProyecto"] = codProyecto;
+            Session["txtTab"] = txtTab.ToString();
+            Session["Accion"] = "Nuevo";
+            Redirect(null, "CatalogoDocumento.aspx", "_blank", "menubar=0,scrollbars=1,width=663,height=547,top=100");
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Session["CodProyecto"] = codProyecto;
+            Session["txtTab"] = txtTab.ToString();
+            Session["Accion"] = "Vista";
+            Redirect(null, "CatalogoDocumento.aspx", "_blank", "menubar=0,scrollbars=1,width=663,height=547,top=100");
+        }
+
+        // FIN WAFS 12-OCT-2014
         #endregion
     }
 }

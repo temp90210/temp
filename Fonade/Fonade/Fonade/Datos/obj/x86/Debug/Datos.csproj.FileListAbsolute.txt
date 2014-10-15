@@ -15,7 +15,6 @@ C:\felipe\fonade\FONADE_Clasico_y_modernizado\Fonade_Modernizado\Fonade\Fonade\F
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Datos\bin\Debug\Datos.dll.config
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Datos\bin\Debug\Datos.dll
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Datos\bin\Debug\Datos.pdb
-C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Datos\bin\Debug\TSHAK.Components.dll
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Datos\obj\x86\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Datos\obj\x86\Debug\Datos.dll
 C:\Users\Roberto\Source\Repos\fonade\Fonade\Fonade\Fonade\Datos\obj\x86\Debug\Datos.pdb

@@ -46,6 +46,28 @@
             </tr>
         </tbody>
     </table>
+    <%--inicio WAFS 12-OCT-2014 --%>
+    <table id="tabla_docs" runat="server" visible="false" width="780" border="0" cellspacing="0"
+        cellpadding="0">
+        <tr>
+            <td align="right">
+                <table width="52" border="0" cellspacing="0" cellpadding="0">
+                    <tr align="center">
+                        <td style="width: 50;">
+                            <asp:ImageButton ID="ImageButton1" ImageUrl="../../Images/icoClip.gif" runat="server"
+                                ToolTip="Nuevo Documento" OnClick="ImageButton1_Click" style="height: 23px" />
+                        </td>
+                        <td style="width: 138;">
+                            <asp:ImageButton ID="ImageButton2" ImageUrl="../../Images/icoClip2.gif" runat="server"
+                                ToolTip="Ver Documentos" OnClick="ImageButton2_Click" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <%--FIN WAFS 12-OCT-2014 --%>
+
     <br />
     <table style="width: 100%">
         <tr>

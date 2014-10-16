@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script src="../../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
     <link href="../../Styles/siteProyecto.css" rel="stylesheet" type="text/css" />
     <script src="../../Scripts/ScriptsGenerales.js" type="text/javascript"></script>
 </head>

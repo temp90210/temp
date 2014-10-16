@@ -3,6 +3,7 @@
 
 <asp:Content runat="server" ID="ProyectosFrameBodyHolder" ContentPlaceHolderID="bodyHolder">
     <script src="../../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
     <script src="../../Scripts/ScriptsGenerales.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {

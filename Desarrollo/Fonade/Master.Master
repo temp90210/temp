@@ -68,6 +68,10 @@
         {
             height: 15px !important;
         }
+        .cont-find{
+            width: 100%;
+            height: auto;
+        }
     </style>
     <meta http-equiv="x-ua-compatible" content="IE=9" />
 </head>

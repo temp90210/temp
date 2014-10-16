@@ -57,55 +57,56 @@
                     </div>
                 </td>
             </tr>
-        </table>
+        </table><br>
         <%--Grilla // Terminar.--%>
+        <div class="cont-find">
         <asp:GridView ID="gv_ResultadosBusqueda" runat="server" AutoGenerateColumns="false"
             OnRowCommand="gv_ResultadosBusqueda_RowCommand">
             <Columns>
                 <asp:BoundField HeaderText="Id_Contacto" DataField="Id_Contacto" Visible="false" />
-                <asp:TemplateField>
+                <asp:TemplateField HeaderText="Nombres" >
                     <ItemTemplate>
                         <asp:LinkButton ID="lnkbtn_Nombres" runat="server" ForeColor="Red" CausesValidation="False"
                             CommandArgument='<%# Eval("Id_Contacto") %>' CommandName="mostrar" Text='<%#Eval("Nombres")%>'
                             Style="text-decoration: none;" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField>
+                <asp:TemplateField HeaderText="Apellidos" >
                     <ItemTemplate>
                         <asp:LinkButton ID="lnkbtn_Apellidos" runat="server" ForeColor="Red" CausesValidation="False"
                             CommandArgument='<%# Eval("Id_Contacto") %>' CommandName="mostrar" Text='<%#Eval("Apellidos")%>'
                             Style="text-decoration: none;" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField>
+                <asp:TemplateField HeaderText="Email" >
                     <ItemTemplate>
                         <asp:LinkButton ID="lnkbtn_Email" runat="server" ForeColor="Red" CausesValidation="False"
                             CommandArgument='<%# Eval("Id_Contacto") %>' CommandName="mostrar" Text='<%#Eval("Email")%>'
                             Style="text-decoration: none;" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField>
+                <asp:TemplateField HeaderText="Identificación" >
                     <ItemTemplate>
                         <asp:LinkButton ID="lnkbtn_Identificacion" runat="server" ForeColor="Red" CausesValidation="False"
                             CommandArgument='<%# Eval("Id_Contacto") %>' CommandName="mostrar" Text='<%#Eval("Identificacion")%>'
                             Style="text-decoration: none;" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField>
+                <asp:TemplateField HeaderText="Grupo" >
                     <ItemTemplate>
                         <asp:LinkButton ID="lnkbtn_NomGrupo" runat="server" ForeColor="Red" CausesValidation="False"
                             CommandArgument='<%# Eval("Id_Contacto") %>' CommandName="mostrar" Text='<%#Eval("NomGrupo")%>'
                             Style="text-decoration: none;" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField>
+                <asp:TemplateField HeaderText="Proyecto" >
                     <ItemTemplate>
                         <asp:LinkButton ID="lnkbtn_NomProyecto" runat="server" ForeColor="Red" CausesValidation="False"
                             CommandArgument='<%# Eval("Id_Contacto") %>' CommandName="mostrar" Text='<%#Eval("NomProyecto")%>'
                             Style="text-decoration: none;" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField>
+                <asp:TemplateField HeaderText="Proyecto ID" >
                     <ItemTemplate>
                         <asp:LinkButton ID="lnkbtn_Id_Proyecto" runat="server" ForeColor="Red" CausesValidation="False"
                             CommandArgument='<%# Eval("Id_Contacto") %>' CommandName="mostrar" Text='<%#Eval("Id_Proyecto")%>'
@@ -115,5 +116,7 @@
                 <asp:BoundField DataField="Id_Grupo" Visible="false" />
             </Columns>
         </asp:GridView>
+        </div>
     </asp:Panel>
 </asp:Content>
+

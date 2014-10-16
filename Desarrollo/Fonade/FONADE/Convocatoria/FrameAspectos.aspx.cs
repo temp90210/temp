@@ -254,7 +254,7 @@ namespace Fonade.FONADE.Convocatoria
                 {
                     if (string.IsNullOrEmpty(reader[0].ToString()))
                     {
-                        lnkadicionar.Text = "Nuevo Variable";
+                        lnkadicionar.Text = "Nueva Variable";
                         lnkadicionar.Visible = true;
                         lnkadicionar.Enabled = true;
                         imgaspectoAgr.Visible = true;
@@ -291,7 +291,7 @@ namespace Fonade.FONADE.Convocatoria
                 }
                 else
                 {
-                    lnkadicionar.Text = "Nuevo Variable";
+                    lnkadicionar.Text = "Nueva Variable";
                     lnkadicionar.Visible = true;
                     lnkadicionar.Enabled = true;
                     imgaspectoAgr.Visible = true;

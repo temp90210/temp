@@ -388,7 +388,7 @@ namespace Fonade.FONADE.Convocatoria
         {
             Session["Id_EvalConvocatoriaAS"] = codConvocatoria;
 
-            Redirect(null, "FrameAspectos.aspx", "_Blank", "width=900,height=650");
+            Redirect(null, "FrameAspectos.aspx", "_Blank", "width=990,height=700");
         }
     }
 }

@@ -1,7 +1,17 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContratoEvaluador.aspx.cs" Inherits="Fonade.FONADE.evaluacion.ContratoEvaluador"  MasterPageFile="~/Emergente.Master" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
+
 <asp:Content ID="BodyContent"  runat="server" ContentPlaceHolderID="bodyContentPlace">
+
+    <script language="javascript">
+        window.onload = zoom;
+        function zoom()
+        {
+          self.moveTo(0,0);
+          self.resizeTo(600, 400);
+        }
+    </script>
 
     <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"> </asp:ToolkitScriptManager>
 

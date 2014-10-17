@@ -17,7 +17,7 @@
             margin: 0px auto;
             text-align: center;
         }
-        .button-aling{
+        .button-align{
             text-align: right;
             width: auto;
             height: auto;
@@ -35,7 +35,7 @@
         }
     </script>
 </head>
-<body style="overflow-x: hidden; overflow-y: hidden; width: 100%;">
+<body style="overflow-x: auto; overflow-y: hidden; width: 100%;">
     <form id="form1" runat="server">
     <div style="width: 100%">
         <table width="98%" border="0">
@@ -130,7 +130,7 @@
                 </td>
             </tr>
         </table>
-        <div class="button-aling"><br>
+        <div class="button-align"><br>
             <asp:Button ID="B_Acion" runat="server" ValidationGroup="accionar" OnClick="B_Acion_Click"
                         Text="Crear" />
             <asp:Button ID="B_Cancelar" runat="server" Text="Cancelar" OnClick="B_Cancelar_Click" />            

@@ -25,7 +25,7 @@
                 Height="100%">
                 <HeaderTemplate>
                     <div id="aportesdiv" class="tab_header" onclick="CargarPestana('frmEvalAportes','SeguimientoPptalAportes.aspx')">
-                        <span>Aportes</span>
+                        <span>Aportes</span>&nbsp;&nbsp;&nbsp;
                     </div>
                 </HeaderTemplate>
                 <ContentTemplate>

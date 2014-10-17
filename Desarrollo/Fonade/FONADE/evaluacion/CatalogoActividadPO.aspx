@@ -17,6 +17,11 @@
             margin: 0px auto;
             text-align: center;
         }
+        .button-aling{
+            text-align: right;
+            width: auto;
+            height: auto;
+        }
         .auto-style2
         {
             height: 23px;
@@ -30,7 +35,7 @@
         }
     </script>
 </head>
-<body style="overflow-x: scroll; overflow-y: hidden; width: 100%;">
+<body style="overflow-x: hidden; overflow-y: hidden; width: 100%;">
     <form id="form1" runat="server">
     <div style="width: 100%">
         <table width="98%" border="0">
@@ -124,21 +129,12 @@
                     </asp:Panel>
                 </td>
             </tr>
-            <tr>
-                <td colspan="2">
-                    &nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: right;">
-                    <asp:Button ID="B_Acion" runat="server" ValidationGroup="accionar" OnClick="B_Acion_Click"
-                        Text="Crear" />
-                </td>
-                <td>
-                    <asp:Button ID="B_Cancelar" runat="server" Text="Cancelar" OnClick="B_Cancelar_Click" />
-                </td>
-            </tr>
         </table>
+        <div class="button-aling"><br>
+            <asp:Button ID="B_Acion" runat="server" ValidationGroup="accionar" OnClick="B_Acion_Click"
+                        Text="Crear" />
+            <asp:Button ID="B_Cancelar" runat="server" Text="Cancelar" OnClick="B_Cancelar_Click" />            
+        </div>
     </div>
     </form>
 </body>

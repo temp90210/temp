@@ -587,7 +587,7 @@ namespace Fonade.FONADE.interventoria
             //NEW Session. (Indica que al cargar este valor, ciertos valores en "CatalogoActividadPO" se volverán visibles).
             Session["Detalles_CambiosPO_PO"] = "PO";
 
-            Redirect(null, "../Evaluacion/CatalogoActividadPO.aspx", "_Blank", "width=730,height=585");
+            Redirect(null, "../Evaluacion/CatalogoActividadPO.aspx", "_Blank", "width=900,height=600");
         }
 
         /// <summary>

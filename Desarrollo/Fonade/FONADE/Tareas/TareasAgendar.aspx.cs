@@ -437,7 +437,13 @@ namespace Fonade.FONADE.Tareas
                           {
                               atr.Id_Contacto,
                               //atr.Nombre
-                              Nombre = atr.Nombre + " (" + atr.NombreRol + ")"
+                              //se comenta nombre + rol entre paréntesis
+                              //ya que estos parentesis ya se agregan
+                              //desde el procedimiento almacenado MD_AgendarTareas_Prueba
+                              //en la linea 118
+                              //y por lo tanto se agregaban dos veces
+                              //Nombre = atr.Nombre + " (" + atr.NombreRol + ")"
+                              Nombre = atr.Nombre
                           });
 
             e.Result = result.ToList();

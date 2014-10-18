@@ -55,8 +55,15 @@ namespace Fonade.FONADE.Administracion
                     EvaluarEnunciado(OPEN);
                 }
             }
-            catch (Exception)
-            { Response.Redirect("~/Account/Login.aspx"); }
+            catch (Exception ex)
+            { 
+                //NO es correcto simplemente "sacar" al usuario cuando
+                //falla cualquier excepcion,
+                //en vez de eso, buscamos excepciones especificas
+                //Response.Redirect("~/Account/Login.aspx"); 
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Mensaje", "alert('Excepcion:"+ex.GetType().Name + ":" + ex.Message+"')", true);
+               
+            }
         }
 
         #region Métodos generales.
@@ -130,11 +137,11 @@ namespace Fonade.FONADE.Administracion
             String sqlConsulta;
 
             sqlConsulta = " SELECT Id_Institucion, NomUnidad, NomInstitucion, Inactivo, CodCiudad, NomTipoInstitucion " +
-                //" , C.NomCiudad " + //Name of the city.
+                          " , C.NomCiudad " + //Name of the city.
                           " FROM Institucion INNER JOIN TipoInstitucion  " +
                           " ON Id_TipoInstitucion = CodTipoInstitucion " +
                           " AND UPPER(NomUnidad) LIKE '" + sLetraUpper.ToUpperInvariant() + "'+ '%' " +
-                //" INNER JOIN Ciudad AS C ON CodCiudad = C.Id_Ciudad " +//New lines for get the name of the city.
+                          " LEFT JOIN Ciudad AS C ON CodCiudad = C.Id_Ciudad " + //get the name of the city.
                           " ORDER BY NomUnidad "; //NOTA: El sorting será programado en el evento "Sorting" de la grilla.
 
             var tabla = consultas.ObtenerDataTable(sqlConsulta, "text");

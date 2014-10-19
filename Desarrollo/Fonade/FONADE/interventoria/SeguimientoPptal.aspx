@@ -114,12 +114,12 @@
                                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("NomTipoIdentificacion") + " No. " + Eval("NumIdentificacion") + "<br>" + Eval("Nombre") + " " + Eval("Apellido") + " - " + Eval("RazonSocial") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <!-- 
+                                <%--
                                 f3l 2014
                                 dateformat: g fecha con hora
                                 dateformat: d fecha sin hora
                                 segun requerimiento EMP47
-                                -->
+                                --%>
                                 <asp:BoundField HeaderText="Fecha Respuesta" DataField="FechaRtaFA" DataFormatString="{0:d}"
                                     HtmlEncode="false" />
                                 <asp:BoundField HeaderText="Valor ReteFuente" DataField="ValorReteFuente" DataFormatString="${0}">

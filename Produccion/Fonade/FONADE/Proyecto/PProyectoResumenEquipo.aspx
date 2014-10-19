@@ -24,8 +24,8 @@
         }
     </style>
 </head>
-<body>
-    <form id="form1" runat="server">
+<body style="background-color:white;background-image:none"> 
+    <form id="form1" runat="server" style="background-color:white;background-image:none">
     <asp:LinqDataSource ID="lds_equipo" runat="server" ContextTypeName="Datos.FonadeDBDataContext"
         AutoPage="true" OnSelecting="lds_equipo_Selecting">
     </asp:LinqDataSource>

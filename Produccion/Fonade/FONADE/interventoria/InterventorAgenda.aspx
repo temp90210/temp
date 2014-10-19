@@ -37,7 +37,11 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Fecha o Período">
                             <ItemTemplate>
-                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("FechaInicio") + " a " + Eval("FechaFin") %>'></asp:Label>
+                                <%-- 
+                                    f3l 2014
+                                    Se agrega formato de fecha para NO mostrar fecha y hora segun solicitud:ERROR INT-81
+                                --%>
+                                <asp:Label ID="Label1" runat="server" Text='<%# String.Format("{0:MM/dd/yy}",Eval("FechaInicio")) + " a " + String.Format("{0:MM/dd/yy}",Eval("FechaFin")) %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

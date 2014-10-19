@@ -10,7 +10,7 @@
     <link href="../../Styles/jquery-ui-1.10.3.min.css" rel="stylesheet" type="text/css" />
     <script src="../../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="../../Scripts/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
-    <script src="../../Scripts/jquery-1.9.1.js"></script>
+    <!--<script src="../../Scripts/jquery-1.9.1.js"></script>-->
     <link href="../../Styles/Site.css" rel="stylesheet" />
     <script src="../../Scripts/ScriptsGenerales.js"></script>
     <script src="../../Scripts/common.js" type="text/javascript"></script>
@@ -23,25 +23,38 @@
         {
             width: 50%;
         }
-        
+        table.Grilla th{
+            text-align: center;
+        }
+        .valor{
+            text-align: right;
+        }
         tr:first-child
         {
             text-align: left;
+        }
+        .help{
+            width: 100%;
+            height: 30px;
         }
     </style>
 </head>
 <body style="overflow-x: hidden;">
     <form id="form1" runat="server">
     <div class="ContentInfo" style="width: 995px; height: auto;">
+        <div class="help">
+
+        </div>
         <table>
             <tr>
                 <td colspan="2">
                     <div class="help_container">
+                        
+                        <div>
+                            <strong>Seguimiento Presupuestal</strong>
+                        </div>
                         <div onclick="textoAyuda({titulo: 'Presupuesto', texto: 'Presupuesto'});">
                             <img src="../../Images/imgAyuda.gif" border="0" alt="help_Objetivos" />
-                        </div>
-                        <div>
-                            &nbsp; <strong>Seguimiento Presupuestal</strong>
                         </div>
                     </div>
                 </td>
@@ -88,27 +101,35 @@
                         <asp:GridView ID="gvpresupuesto" runat="server" CssClass="Grilla" AutoGenerateColumns="False"
                             OnRowCommand="gvpresupuesto_RowCommand">
                             <Columns>
-                                <asp:BoundField HeaderText="Id" DataField="Id_PagoActividad" />
+                                <asp:BoundField HeaderText="Id" DataField="Id_PagoActividad" ></asp:BoundField>
                                 <asp:BoundField HeaderText="Nombre" DataField="NomPagoActividad" />
-                                <asp:BoundField HeaderText="Fecha Interventor" DataField="FechaInterventor" />
-                                <asp:BoundField HeaderText="Valor" DataField="CantidadDinero" />
+                                <asp:BoundField HeaderText="Fecha Interventor" DataField="FechaInterventor"/>
+                                <asp:BoundField HeaderText="Valor" DataField="CantidadDinero" DataFormatString="{0:C}"/>
                                 <asp:BoundField HeaderText="Estado" DataField="Estado" />
                                 <asp:TemplateField HeaderText="Beneficiario">
                                     <EditItemTemplate>
                                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("NomTipoIdentificacion") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <ItemTemplate>
-                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("NomTipoIdentificacion") + " No. " + Eval("NumIdentificacion") + Eval("Nombre") + " " + Eval("Apellido") + " - " + Eval("RazonSocial") %>'></asp:Label>
+                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("NomTipoIdentificacion") + " No. " + Eval("NumIdentificacion") + "<br>" + Eval("Nombre") + " " + Eval("Apellido") + " - " + Eval("RazonSocial") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:BoundField HeaderText="Fecha Respuesta" DataField="FechaRtaFA" DataFormatString="{0:dd/MM/yyyy}"
+                                <%--
+                                f3l 2014
+                                dateformat: g fecha con hora
+                                dateformat: d fecha sin hora
+                                segun requerimiento EMP47
+                                --%>
+                                <asp:BoundField HeaderText="Fecha Respuesta" DataField="FechaRtaFA" DataFormatString="{0:d}"
                                     HtmlEncode="false" />
-                                <asp:BoundField HeaderText="Valor ReteFuente" DataField="ValorReteFuente" />
-                                <asp:BoundField HeaderText="Valor ReteIVA" DataField="ValorReteIVA" />
-                                <asp:BoundField HeaderText="Valor ReteICA" DataField="ValorReteICA" />
-                                <asp:BoundField HeaderText="Otros Descuentos" DataField="OtrosDescuentos" />
-                                <asp:BoundField HeaderText="Valor Pagado" DataField="ValorPagado" />
-                                <asp:BoundField HeaderText="Codigo Pago" DataField="CodigoPago" />
+                                <asp:BoundField HeaderText="Valor ReteFuente" DataField="ValorReteFuente" DataFormatString="${0}">
+                                    <ItemStyle CssClass="valor"/>
+                                </asp:BoundField>
+                                <asp:BoundField HeaderText="Valor ReteIVA" DataField="ValorReteIVA" DataFormatString="${0}"><ItemStyle CssClass="valor"/></asp:BoundField>
+                                <asp:BoundField HeaderText="Valor ReteICA" DataField="ValorReteICA" DataFormatString="${0}"><ItemStyle CssClass="valor"/></asp:BoundField>
+                                <asp:BoundField HeaderText="Otros Descuentos" DataField="OtrosDescuentos" DataFormatString="${0}"><ItemStyle CssClass="valor"/></asp:BoundField>
+                                <asp:BoundField HeaderText="Valor Pagado" DataField="ValorPagado" DataFormatString="${0}"><ItemStyle CssClass="valor"/></asp:BoundField>
+                                <asp:BoundField HeaderText="Codigo Pago" DataField="CodigoPago" DataFormatString="${0}"><ItemStyle CssClass="valor"/></asp:BoundField>
                                 <asp:TemplateField HeaderText="Anexos del Pago">
                                     <ItemTemplate>
                                         <asp:Button ID="btnverdocumentsopagos" runat="server" Text="Ver" CommandArgument='<%# Eval("Id_PagoActividad") %>'

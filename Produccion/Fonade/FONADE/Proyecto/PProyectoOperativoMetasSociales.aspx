@@ -15,8 +15,8 @@
     <script src="../../Scripts/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
     <script src="../../Scripts/common.js" type="text/javascript"></script>
 </head>
-<body>
-    <form id="form1" runat="server">
+<body style="background-color:white;background-image:none">
+    <form id="form1" runat="server" style="background-color:white;background-image:none">
     <uc2:Alert ID="Alert1" runat="server" />
     <asp:Panel ID="pnlPrincipal" Visible="true" runat="server">
         <table>

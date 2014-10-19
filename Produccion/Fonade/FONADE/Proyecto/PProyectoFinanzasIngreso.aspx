@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" style="background-color:white;background-image:none;">
     <asp:Panel ID="pnlPrincipal" Visible="true" runat="server">
         <table>
             <tbody>

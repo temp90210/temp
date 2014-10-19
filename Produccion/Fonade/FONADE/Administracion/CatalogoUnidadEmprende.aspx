@@ -127,13 +127,16 @@
                                     </asp:TemplateField>
                                     <asp:BoundField HeaderText="Tipo" DataField="NomTipoInstitucion" SortExpression="NomTipoInstitucion"
                                         HeaderStyle-Width="30%" />
+                                    
+                                    <asp:BoundField HeaderText="Ciudad" DataField="NomCiudad" />
+
                                     <asp:TemplateField HeaderText="Estado" ItemStyle-ForeColor="Blue" HeaderStyle-Width="27%">
                                         <ItemTemplate>
                                             <asp:Label ID="lbl_id_inst" Text='<%# Eval("Id_Institucion") %>' runat="server" Visible="false" />
                                             <asp:Label ID="lbl_estado" Text='<%# Eval("Inactivo") %>' runat="server" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField HeaderText="CodCiudad" DataField="CodCiudad" Visible="false" />
+                                    
                                 </Columns>
                                 <PagerStyle CssClass="Paginador" />
                             </asp:GridView>

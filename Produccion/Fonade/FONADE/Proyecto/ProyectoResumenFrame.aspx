@@ -7,8 +7,8 @@
     <title></title>
     <link href="../../Styles/siteProyecto.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-    <form id="form1" runat="server">
+<body style="background-color:white;background-image:none">
+    <form id="form1" runat="server" style="background-color:white;background-image:none">
     <div>
         <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
         </ajaxToolkit:ToolkitScriptManager>

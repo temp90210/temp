@@ -25,8 +25,8 @@
         }
     </style>
 </head>
-<body>
-    <form id="form1" runat="server">
+<body style="background-color:white;background-image:none;">
+    <form id="form1" runat="server" style="background-color:white;background-image:none;">
     <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
     </ajaxToolkit:ToolkitScriptManager>
     <asp:Panel ID="pnlCapitalTrabajo" Visible="true" runat="server">

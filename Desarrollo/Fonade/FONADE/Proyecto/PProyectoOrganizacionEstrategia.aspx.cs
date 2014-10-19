@@ -54,7 +54,8 @@ namespace Fonade.FONADE.Proyecto
                         where pmi.CodProyecto == Convert.ToInt32(codProyecto)
                         select pmi;
 
-            return query.First();
+            // return query.First();
+            return query.FirstOrDefault(); //WAFS 19-OCT-2014
         }
 
         private void definirCampos()

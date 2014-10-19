@@ -58,10 +58,16 @@ namespace Fonade.Controles
         /// </summary>
         private void realizarConsulta()
         {
+//            sql = @"select count(id_tareausuario) as cuantos
+//                    from tareausuariorepeticion tr, tareausuario t, tareaprograma
+//                    where id_tareausuario=codtareausuario and CodProyecto=" + codProyecto + @" and id_tareaprograma=codtareaprograma
+//                    and id_tareaprograma=" + Constantes.CONST_PostIt + " and fechacierre is null";
+            //WAFS se coloca el codigo de proyeco en "null" para cuando el proyecto no tiene datos de organizacion estrategia porque estaba abordando
+            string icodProyecto = string.IsNullOrEmpty((codProyecto)) ? "null" : codProyecto; //WAFS 19-OCT-2014
             sql = @"select count(id_tareausuario) as cuantos
                     from tareausuariorepeticion tr, tareausuario t, tareaprograma
-                    where id_tareausuario=codtareausuario and CodProyecto=" + codProyecto + @" and id_tareaprograma=codtareaprograma
-                    and id_tareaprograma=" + Constantes.CONST_PostIt + " and fechacierre is null";
+                    where id_tareausuario=codtareausuario and CodProyecto=" + icodProyecto + @" and id_tareaprograma=codtareaprograma
+                    and id_tareaprograma=" + Constantes.CONST_PostIt + " and fechacierre is null"; //WAFS 19-OCT-2014
 
             if (!String.IsNullOrEmpty(txtCampo))
             {
